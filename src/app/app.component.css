@@ -1,0 +1,19 @@
+.mat-toolbar.mat-primary{
+    /* background: black; */
+    background: rgb(74, 21, 75);
+    color:white;
+}
+.mat-list-item mat-icon{
+    margin-right: 20px;
+}
+.mat-sidenav{
+    width: 280px;
+}
+.user-profile {
+    color: white;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+}

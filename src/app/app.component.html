@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+  <button style="margin-right: 20px;" (click)="collpaseSideBar()" mat-icon-button color="white" aria-label="home icon">
+      <mat-icon>
+          menu
+      </mat-icon>
+  </button>
+  <span [routerLink]="['']" style="cursor: pointer;outline: none;">Whether App</span>
+  <a class="user-profile">
+      User&nbsp;&nbsp;
+      <mat-icon>
+          account_circle
+      </mat-icon>
+  </a>
+</mat-toolbar>
+
+<!-- <router-outlet></router-outlet> -->
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened  #sidenav id="menu1">
+        <mat-nav-list style="overflow: hidden">
+            <a mat-list-item [routerLink]="['/home']">
+                <mat-icon aria-hidden="false" aria-label="icon" style="color: rgb(74, 21, 75);">store</mat-icon>
+                Dashboard
+            </a>
+        </mat-nav-list>
+        <mat-nav-list style="overflow: hidden">
+            <a  mat-list-item>
+                <mat-icon aria-hidden="false" aria-label="icon" style="color: rgb(74, 21, 75);">help</mat-icon>
+                Help
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content id="sideMenu1">
+        <div style="height: 88vh;overflow:auto" id="adminNav">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
